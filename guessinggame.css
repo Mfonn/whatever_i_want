@@ -1,0 +1,151 @@
+body {
+    background-color: #41436A;
+}
+
+#container {
+    background-color: #a7606e;
+    border: 3px solid blueviolet;
+    height: 200px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    color: #662841;
+    font-size: 20px;
+}
+
+#input {
+    width: 100px;
+    margin: 25px auto;
+}
+
+/* for the enter button*/
+#btn { 
+    margin: 25px auto auto 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+} 
+
+.enter:hover {
+  background-color: #FE9677;
+  color:aquamarine;
+}
+
+/* for the clock */
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+
+}
+
+/*Sets the containers height and width */
+.base-timer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-left: 570px;
+
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+/* Removes SVG styling that would hide the time label*/
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+/* The SVG path that displays the timer's progress*/
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: #00492b;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+
+  /*Size should match the parent container*/
+  width: 200px;
+  height: 200px;
+
+  /*Keep the label aligned to the top*/
+  top: 0;
+
+  /*Create a flexible bow that centers content vertically*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+
+
+/* styling the button */
+.button {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: #a7606e;
+  border: none;
+  color: #662841;
+  text-align: center;
+  font-size: 20px;
+  padding: 16px;
+  height: 70px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 620px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
